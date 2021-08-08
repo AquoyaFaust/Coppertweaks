@@ -30,12 +30,12 @@ public class CopperTweaks {
 
 	public CopperTweaks() {
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
-		
+
 		ItemInit.ITEMS.register(bus);
 		BlockInit.BLOCKS.register(bus);
-		
+
 		MinecraftForge.EVENT_BUS.addListener(EventPriority.HIGH, FeatureInit::addOres);
-		
+
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 

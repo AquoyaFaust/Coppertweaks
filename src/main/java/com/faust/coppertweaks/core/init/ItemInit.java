@@ -42,7 +42,7 @@ public class ItemInit {
 	public static final RegistryObject<Item> ROSEGOLD_INGOT = ITEMS.register("rosegold_ingot",
 			() -> new Item(new Item.Properties().group(ItemGroup.MISC)));
 
-	public static final RegistryObject<Item> BRONZE = ITEMS.register("BRONZE",
+	public static final RegistryObject<Item> BRONZE = ITEMS.register("bronze_sword",
 			() -> new SwordItem(CustomToolMaterial.BRONZE, 5, -2f,
 					new Item.Properties().group(ItemGroup.COMBAT)));
 	
