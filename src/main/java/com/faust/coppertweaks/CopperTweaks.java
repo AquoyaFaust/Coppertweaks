@@ -3,10 +3,13 @@ package com.faust.coppertweaks;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import com.faust.coppertweaks.common.entity.MummyEntity;
 import com.faust.coppertweaks.core.init.BlockInit;
+import com.faust.coppertweaks.core.init.EntityTypesInit;
 import com.faust.coppertweaks.core.init.FeatureInit;
 import com.faust.coppertweaks.core.init.ItemInit;
 
+import net.minecraft.entity.ai.attributes.GlobalEntityTypeAttributes;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -15,9 +18,11 @@ import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.DeferredWorkQueue;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -31,11 +36,12 @@ public class CopperTweaks {
 	public CopperTweaks() {
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 		
+		EntityTypesInit.ENTITY_TYPES.register(bus);
 		ItemInit.ITEMS.register(bus);
 		BlockInit.BLOCKS.register(bus);
-		
+
 		MinecraftForge.EVENT_BUS.addListener(EventPriority.HIGH, FeatureInit::addOres);
-		
+
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 
@@ -46,5 +52,12 @@ public class CopperTweaks {
 					.setRegistryName(block.getRegistryName()));
 		});
 
+	}
+	
+	@SuppressWarnings("deprecation")
+	public void commonSetup(final FMLCommonSetupEvent event) {
+		
+		DeferredWorkQueue.runLater(() -> 
+		GlobalEntityTypeAttributes.put(EntityTypesInit.MUMMY.get(), MummyEntity.setAttributes().create()));
 	}
 }
