@@ -33,15 +33,14 @@ public class CopperTweaks {
 	public static final Logger LOGGER = LogManager.getLogger();
 	public static final String MOD_ID = "coppertweaks";
 
+	@SuppressWarnings("deprecation")
 	public CopperTweaks() {
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 		
 		EntityTypesInit.ENTITY_TYPES.register(bus);
 		ItemInit.ITEMS.register(bus);
 		BlockInit.BLOCKS.register(bus);
-
 		MinecraftForge.EVENT_BUS.addListener(EventPriority.HIGH, FeatureInit::addOres);
-
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 
@@ -56,8 +55,10 @@ public class CopperTweaks {
 	
 	@SuppressWarnings("deprecation")
 	public void commonSetup(final FMLCommonSetupEvent event) {
-		
+
 		DeferredWorkQueue.runLater(() -> 
 		GlobalEntityTypeAttributes.put(EntityTypesInit.MUMMY.get(), MummyEntity.setAttributes().create()));
+		//DeferredWorkQueue.runLater(() -> 
+		//GlobalEntityTypeAttributes.put(EntityTypesInit.MUMMY.get(), MummyEntity.setAttributes().create()));
 	}
 }
