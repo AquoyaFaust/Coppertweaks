@@ -1,5 +1,7 @@
 package com.faust.coppertweaks.common.block;
 
+import com.faust.coppertweaks.core.init.TileEntityTypesInit;
+
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -22,7 +24,7 @@ public class SarcophagusBlock extends Block{
 	}
 	
 	public TileEntity createTileEntity(BlockState block, IBlockReader world) {
-		return super.createTileEntity(block, world);
+		return TileEntityTypesInit.SARCOPHAGUS_TILE_ENTITY_TYPE.get().create();
 	}
 
 }

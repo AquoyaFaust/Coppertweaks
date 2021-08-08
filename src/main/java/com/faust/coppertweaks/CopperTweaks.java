@@ -6,6 +6,7 @@ import org.apache.logging.log4j.Logger;
 import com.faust.coppertweaks.core.init.BlockInit;
 import com.faust.coppertweaks.core.init.FeatureInit;
 import com.faust.coppertweaks.core.init.ItemInit;
+import com.faust.coppertweaks.core.init.TileEntityTypesInit;
 
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -33,7 +34,7 @@ public class CopperTweaks {
 		
 		ItemInit.ITEMS.register(bus);
 		BlockInit.BLOCKS.register(bus);
-		
+		TileEntityTypesInit.TILE_ENTITY_TYPE.register(bus);
 		MinecraftForge.EVENT_BUS.addListener(EventPriority.HIGH, FeatureInit::addOres);
 		
 		MinecraftForge.EVENT_BUS.register(this);

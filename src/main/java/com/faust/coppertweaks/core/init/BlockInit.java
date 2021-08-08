@@ -2,6 +2,7 @@
 package com.faust.coppertweaks.core.init;
 
 import com.faust.coppertweaks.CopperTweaks;
+import com.faust.coppertweaks.common.block.SarcophagusBlock;
 
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
@@ -22,7 +23,9 @@ public class BlockInit {
 	public static final RegistryObject<Block> COPPER_ORE = BLOCKS
 			.register("copper_ore",
 					() -> new Block(AbstractBlock.Properties.from(Blocks.IRON_ORE)));
-
+	
+	public static final RegistryObject<Block> SARCOPHAGUS = BLOCKS
+			.register("sarcophagus", () -> new SarcophagusBlock());
 	// () -> new Block(Properties.of(Material.STONE, MaterialColor.COLOR_BLUE)
 	// .harvestTool(ToolType.PICKAXE).harvestLevel(0).sound(SoundType.STONE).requiresCorrectToolForDrops().destroyTime(1f)));
 }
