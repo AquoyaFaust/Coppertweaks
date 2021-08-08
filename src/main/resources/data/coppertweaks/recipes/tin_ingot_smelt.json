@@ -1,0 +1,9 @@
+{
+	"type": "minecraft:smelting",
+	"ingredient": {
+		"item": "coppertweaks:tin_ore"
+	},
+	"result": "coppertweaks:tin_ingot",
+	"experience": 3,
+	"cookingtime": 100
+}

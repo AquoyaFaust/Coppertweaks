@@ -1,0 +1,19 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern" : [
+		"BBB",
+		"B B",
+		"B B"
+	],
+	
+	"key": {
+		"B": {
+			"item": "coppertweaks:bronze_ingot"
+		}
+	},
+	
+	"result": {
+		"item": "coppertweaks:bronze_leggings",
+		"count": 1
+	}
+}

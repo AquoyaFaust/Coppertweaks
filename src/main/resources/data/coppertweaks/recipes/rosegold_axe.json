@@ -1,0 +1,22 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern" : [
+		" RR",
+		" SR",
+		" S "
+	],
+	
+	"key": {
+		"R": {
+			"item": "coppertweaks:rosegold_ingot"
+		},
+		"S": {
+			"item": "minecraft:stick"
+		}
+	},
+	
+	"result": {
+		"item": "coppertweaks:rosegold_pickaxe",
+		"count": 1
+	}
+}

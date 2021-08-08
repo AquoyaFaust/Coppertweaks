@@ -1,0 +1,36 @@
+{
+	"type": "minecraft:crafcopperg_shapeless",
+	"ingredients": [
+		{
+			"item": "coppertweaks:copper_nugget"
+		},
+		{
+			"item": "coppertweaks:copper_nugget"
+		},
+		{
+			"item": "coppertweaks:copper_nugget"
+		},
+		{
+			"item": "coppertweaks:copper_nugget"
+		},
+		{
+			"item": "coppertweaks:copper_nugget"
+		},
+		{
+			"item": "coppertweaks:copper_nugget"
+		},
+		{
+			"item": "coppertweaks:copper_nugget"
+		},
+		{
+			"item": "coppertweaks:copper_nugget"
+		},
+		{
+			"item": "coppertweaks:copper_nugget"
+		}
+	],
+	"result": {
+		"item": "coppertweaks:copper_ingot",
+		"count": 1
+	}
+}

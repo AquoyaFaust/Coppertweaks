@@ -1,0 +1,13 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{
+			"item": "coppertweaks:tin_ingot"
+		}
+	],
+	"result": {
+		"item": "coppertweaks:tin_nugget",
+		"count": 9
+	}
+
+}

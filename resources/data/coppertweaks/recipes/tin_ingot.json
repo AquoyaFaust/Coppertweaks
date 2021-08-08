@@ -1,0 +1,36 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{
+			"item": "coppertweaks:tin_nugget"
+		},
+		{
+			"item": "coppertweaks:tin_nugget"
+		},
+		{
+			"item": "coppertweaks:tin_nugget"
+		},
+		{
+			"item": "coppertweaks:tin_nugget"
+		},
+		{
+			"item": "coppertweaks:tin_nugget"
+		},
+		{
+			"item": "coppertweaks:tin_nugget"
+		},
+		{
+			"item": "coppertweaks:tin_nugget"
+		},
+		{
+			"item": "coppertweaks:tin_nugget"
+		},
+		{
+			"item": "coppertweaks:tin_nugget"
+		}
+	],
+	"result": {
+		"item": "coppertweaks:tin_ingot",
+		"count": 1
+	}
+}

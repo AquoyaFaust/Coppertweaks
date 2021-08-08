@@ -1,0 +1,26 @@
+modLoader="javafml" 
+loaderVersion="[33,)"
+license="MIT"
+issueTrackerURL="http://my.issue.tracker/" 
+[[mods]] 
+modId="coppertweaks" 
+version="${file.jarVersion}" 
+displayName="Copper Tweaks" 
+logoFile="examplemod.png" 
+credits="C4y is the GOAT"
+authors="CopperTweaks Author"
+description='''
+Adds Copper stuff and Some Tin
+'''
+[[dependencies.coppertweaks]] 
+    modId="forge" 
+    mandatory=true 
+    versionRange="[33,)" 
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.coppertweaks]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.16.2]"
+    ordering="NONE"
+    side="BOTH"

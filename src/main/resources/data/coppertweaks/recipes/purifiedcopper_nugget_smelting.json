@@ -1,0 +1,9 @@
+{
+	"type": "minecraft:smelting",
+	"ingredient": {
+		"item": "coppertweaks:copper_ingot"
+	},
+	"result": "coppertweaks:purifiedcopper_nugget",
+	"experience": 3,
+	"cookingtime": 100
+}
