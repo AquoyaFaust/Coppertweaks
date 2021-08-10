@@ -2,6 +2,7 @@
 package com.faust.coppertweaks.core.init;
 
 import com.faust.coppertweaks.CopperTweaks;
+import com.faust.coppertweaks.common.block.AlloySmelterBlock;
 import com.faust.coppertweaks.common.block.SarcophagusBlock;
 
 import net.minecraft.block.AbstractBlock;
@@ -26,6 +27,9 @@ public class BlockInit {
 	
 	public static final RegistryObject<Block> SARCOPHAGUS = BLOCKS
 			.register("sarcophagus", () -> new SarcophagusBlock());
+	
+	public static final RegistryObject<Block> ALLOY_SMELTER = BLOCKS
+			.register("alloy_smelter", () -> new AlloySmelterBlock());
 	// () -> new Block(Properties.of(Material.STONE, MaterialColor.COLOR_BLUE)
 	// .harvestTool(ToolType.PICKAXE).harvestLevel(0).sound(SoundType.STONE).requiresCorrectToolForDrops().destroyTime(1f)));
 }
